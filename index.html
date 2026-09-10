@@ -1513,7 +1513,7 @@
                 </div>
             </div>
 
-            <div class="cards-container" onclick="changeCard(1)" style="cursor:pointer;">
+            <div class="cards-container" style="cursor:pointer;">
             <div class="cards-track" id="cardsTrack">
                 <!-- Card 1 -->
                 <div class="pizza-card">
@@ -1662,24 +1662,36 @@
         updatePizza();
         updateNav();
 
-        // Touch/swipe support
-        let touchStartX = 0;
-        let touchEndX = 0;
+        // Swipe support
+        const cardsContainer = document.querySelector('.cards-container');
+        let swipeStartX = 0;
+        let swiped = false;
 
-        track.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        });
+        function onSwipeStart(x) {
+            swipeStartX = x;
+            swiped = false;
+        }
 
-        track.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            const diff = touchStartX - touchEndX;
+        function onSwipeEnd(x) {
+            const diff = swipeStartX - x;
             if (Math.abs(diff) > 50) {
-                if (diff > 0) {
-                    changeCard(1);
-                } else {
-                    changeCard(-1);
-                }
+                swiped = true;
+                changeCard(diff > 0 ? 1 : -1);
             }
+        }
+
+        cardsContainer.addEventListener('touchstart', (e) => onSwipeStart(e.touches[0].screenX), { passive: true });
+        cardsContainer.addEventListener('touchend', (e) => onSwipeEnd(e.changedTouches[0].screenX));
+        cardsContainer.addEventListener('mousedown', (e) => onSwipeStart(e.screenX));
+        cardsContainer.addEventListener('mouseup', (e) => onSwipeEnd(e.screenX));
+
+        cardsContainer.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (swiped) {
+                swiped = false;
+                return;
+            }
+            changeCard(1);
         });
 
         // Keyboard navigation
