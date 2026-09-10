@@ -955,14 +955,23 @@
             width: 100%;
             height: 100%;
             border-radius: 50%;
+            overflow: hidden;
             filter: drop-shadow(0 8px 24px rgba(255, 93, 1, 0.35));
+        }
+
+        .pizza-photo .slice img-img,
+        .pizza-photo .slice::before {
+            content: '';
+            position: absolute;
+            inset: -6%;
+            background-image: url('pizza.png');
+            background-size: cover;
+            background-position: center;
         }
 
         .pizza-photo .slice {
             position: absolute;
             inset: 0;
-            background-image: url('pizza.png');
-            background-size: 100% 100%;
             transform: scale(0) rotate(-40deg);
             opacity: 0;
             transform-origin: 50% 50%;
