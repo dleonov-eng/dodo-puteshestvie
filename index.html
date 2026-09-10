@@ -44,6 +44,13 @@
             --dodo-white: #FFFFFF;
             --dodo-radius: 24px;
             --dodo-radius-sm: 16px;
+            --pizza-size: clamp(72px, 16dvh, 160px);
+            --card-pad-x: clamp(16px, 4vw, 24px);
+            --card-pad-t: clamp(4px, 1.5dvh, 14px);
+            --card-pad-b: clamp(12px, 2dvh, 18px);
+            --card-h3: clamp(17px, 4.8vw, 22px);
+            --card-p: clamp(13px, 3.6vw, 15px);
+            --nav-btn-text: clamp(13px, 3.6vw, 15px);
         }
 
         * {
@@ -937,7 +944,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            padding: 8px 16px 16px;
+            padding: clamp(4px, 1.5dvh, 16px) 16px clamp(12px, 2dvh, 16px);
             width: 100%;
             max-width: 480px;
             margin: 0 auto;
@@ -1019,20 +1026,20 @@
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
             width: 100%;
             overflow: hidden;
-            padding-top: 16px;
+            padding-top: clamp(10px, 2dvh, 16px);
         }
 
         .unified-card .pizza-display {
             margin: 0 auto !important;
-            width: 140px !important;
-            height: 140px !important;
+            width: var(--pizza-size) !important;
+            height: var(--pizza-size) !important;
         }
 
         .pizza-card {
             width: 100%;
             min-width: 100%;
             flex-shrink: 0;
-            padding: 4px 20px 14px;
+            padding: var(--card-pad-t) var(--card-pad-x) var(--card-pad-b);
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
@@ -1149,18 +1156,18 @@
         }
 
         .pizza-card h3 {
-            font-size: 20px;
+            font-size: var(--card-h3);
             font-weight: 700;
             color: #2C1D1D;
-            margin-bottom: 10px;
+            margin-bottom: clamp(6px, 1dvh, 10px);
             line-height: 1.25;
         }
 
         .pizza-card p {
-            font-size: 14px;
+            font-size: var(--card-p);
             color: rgba(44, 29, 29, 0.75);
             line-height: 1.5;
-            margin-bottom: 10px;
+            margin-bottom: clamp(6px, 1dvh, 10px);
         }
 
         .pizza-card .card-list {
@@ -1252,17 +1259,17 @@
             align-items: stretch;
             justify-content: center;
             gap: 12px;
-            margin-top: 16px;
+            margin-top: clamp(8px, 1.5dvh, 16px);
             width: 100%;
         }
 
         .nav-btn {
-            padding: 14px 20px;
-            border-radius: 16px;
+            padding: clamp(10px, 1.6dvh, 14px) 14px;
+            border-radius: clamp(12px, 3vw, 16px);
             border: 2px solid rgba(255, 93, 1, 0.3);
             background: transparent;
             color: #FF5D01;
-            font-size: 15px;
+            font-size: var(--nav-btn-text);
             font-weight: 700;
             font-family: inherit;
             cursor: pointer;
