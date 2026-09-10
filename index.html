@@ -1424,18 +1424,16 @@
             </div>
         </div>
 
-        <div class="cards-container">
+        <div class="cards-container" onclick="changeCard(1)" style="cursor:pointer;">
             <div class="cards-track" id="cardsTrack">
                 <!-- Card 1 -->
                 <div class="pizza-card">
-                    <div class="card-tag">🍕 Кусочек 1</div>
                     <h3>Додо Путешествие</h3>
                     <p>Додо Путешествие — это ваш персональный гид по городам, который соединяет любимые места с вкусными остановками. Исследуйте достопримечательности и получайте награды!</p>
                 </div>
                 <!-- Card 2 -->
                 <div class="pizza-card">
-                    <div class="card-tag">🍕 Кусочек 2</div>
-                    <h3>Как это работает?</h3>
+                        <h3>Как это работает?</h3>
                     <ul class="card-list">
                         <li><span class="step-num">1</span>Выбираете маршрут</li>
                         <li><span class="step-num">2</span>Достигаете цели — получаете промокод</li>
@@ -1444,8 +1442,7 @@
                 </div>
                 <!-- Card 3 -->
                 <div class="pizza-card">
-                    <div class="card-tag">🍕 Кусочек 3</div>
-                    <h3>Маршрут путешествия</h3>
+                        <h3>Маршрут путешествия</h3>
                     <p>Пять этапов пути — от старта до заказа пиццы.</p>
                     <div class="card-stops">
                         <div class="card-stop"><div class="stop-icon">🚀</div><div class="stop-text"><h4>Старт</h4><p>Знакомство с маршрутом</p></div></div>
@@ -1457,8 +1454,7 @@
                 </div>
                 <!-- Card 4 -->
                 <div class="pizza-card">
-                    <div class="card-tag">🍕 Кусочек 4</div>
-                    <h3>Что получает клиент</h3>
+                        <h3>Что получает клиент</h3>
                     <p>За каждый пройденный этап — бонус. Чем дальше продвигаетесь, тем ценнее награда.</p>
                     <div class="card-features">
                         <div class="card-feature"><span class="emoji">🎟️</span> Промокоды</div>
@@ -1469,8 +1465,7 @@
                 </div>
                 <!-- Card 5 -->
                 <div class="pizza-card">
-                    <div class="card-tag">🍕 Кусочек 5</div>
-                    <h3>Экраны проекта</h3>
+                        <h3>Экраны проекта</h3>
                     <p>Тринадцать экранов — каждая глава путешествия с уникальным дизайном и интерактивом.</p>
                     <div class="card-features">
                         <div class="card-feature"><span class="emoji">🚀</span> Старт</div>
@@ -1481,10 +1476,9 @@
                 </div>
                 <!-- Card 6 -->
                 <div class="pizza-card">
-                    <div class="card-tag">🍕 Кусочек 6</div>
-                    <h3>Готовы начать путешествие?</h3>
+                        <h3>Готовы начать путешествие?</h3>
                     <p>Запустим проект и познакомим ваших клиентов с миром Додо Пиццы. Свяжитесь с командой для запуска!</p>
-                    <button class="card-cta" onclick="alert('Демонстрационная страница. Свяжитесь с командой проекта для запуска.');">
+                    <button class="card-cta" onclick="event.stopPropagation(); alert('Демонстрационная страница. Свяжитесь с командой проекта для запуска.');">
                         Связаться с командой
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </button>
