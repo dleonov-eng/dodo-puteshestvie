@@ -1422,7 +1422,6 @@
                 <div class="slice" data-slice="4"></div>
                 <div class="slice" data-slice="5"></div>
             </div>
-            <div class="pizza-counter" id="pizzaCounter">1 / 6</div>
         </div>
 
         <div class="cards-container">
@@ -1564,7 +1563,6 @@
         const nextBtn = document.getElementById('nextBtn');
         const dots = document.querySelectorAll('.dot');
         const slices = document.querySelectorAll('.pizza-photo .slice');
-        const counter = document.getElementById('pizzaCounter');
 
         function updatePizza() {
             slices.forEach((slice, i) => {
@@ -1574,8 +1572,6 @@
                     slice.classList.remove('added');
                 }
             });
-            const count = currentCard + 1;
-            counter.textContent = count + ' / ' + totalCards;
         }
 
         function updateNav() {
