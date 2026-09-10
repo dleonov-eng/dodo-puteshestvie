@@ -1509,7 +1509,7 @@
 
         <div class="cards-nav">
             <button class="nav-btn" id="prevBtn" onclick="goToCard(0)" disabled>Вернуться в начало</button>
-            <button class="nav-btn" id="nextBtn" onclick="changeCard(1)">Я все знаю, начать путешествие</button>
+            <button class="nav-btn" id="nextBtn" onclick="startJourney()">Я все знаю, начать путешествие</button>
         </div>
     </section>
 
@@ -1572,10 +1572,13 @@
 
         function updateNav() {
             prevBtn.disabled = currentCard === 0;
-            nextBtn.disabled = currentCard === totalCards - 1;
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === currentCard);
-            });
+            nextBtn.textContent = currentCard === totalCards - 1
+                ? 'Начать путешествие'
+                : 'Я все знаю, начать путешествие';
+        }
+
+        function startJourney() {
+            alert('Запуск путешествия!');
         }
 
         function goToCard(index) {
