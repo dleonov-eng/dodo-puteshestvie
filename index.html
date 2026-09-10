@@ -1240,6 +1240,13 @@
             background: #E54E00;
         }
 
+        .pizza-card .card-img {
+            width: 100%;
+            border-radius: 12px;
+            margin-top: 8px;
+            display: block;
+        }
+
         .cards-nav {
             display: flex;
             align-items: stretch;
@@ -1362,6 +1369,99 @@
                 font-size: 16px;
             }
         }
+
+        /* ===== SHORT SCREENS (height-based) ===== */
+        @media (max-width: 768px) and (max-height: 780px) {
+            .unified-card {
+                padding-top: 10px;
+            }
+
+            .unified-card .pizza-display {
+                width: 100px !important;
+                height: 100px !important;
+            }
+
+            .pizza-card h3 {
+                font-size: 18px;
+                margin-bottom: 6px;
+            }
+
+            .pizza-card p {
+                font-size: 13px;
+                margin-bottom: 8px;
+                line-height: 1.45;
+            }
+
+            .pizza-card .card-stop {
+                padding: 5px 10px;
+                gap: 8px;
+            }
+
+            .pizza-card .card-stop .stop-icon {
+                width: 26px;
+                height: 26px;
+                font-size: 13px;
+            }
+
+            .pizza-card .card-stop .stop-text h4 {
+                font-size: 13px;
+            }
+
+            .pizza-card .card-stop .stop-text p {
+                font-size: 11px;
+                margin: 0;
+            }
+
+            .pizza-card .card-list {
+                margin: 8px 0 0;
+            }
+
+            .pizza-card .card-list li {
+                padding: 5px 0;
+                font-size: 13px;
+            }
+
+            .pizza-card .card-list li .step-num {
+                width: 24px;
+                height: 24px;
+                font-size: 12px;
+            }
+
+            .pizza-card .card-cta {
+                padding: 10px 18px;
+                font-size: 13px;
+                margin-top: 8px;
+            }
+
+            .cards-nav {
+                margin-top: 10px;
+            }
+
+            .nav-btn {
+                padding: 11px 14px;
+                font-size: 13px;
+                border-radius: 12px;
+            }
+        }
+
+        @media (max-width: 768px) and (max-height: 660px) {
+            .unified-card .pizza-display {
+                width: 80px !important;
+                height: 80px !important;
+            }
+
+            .navbar {
+                padding: 8px 16px;
+            }
+
+            .navbar-logo {
+                font-size: 16px;
+            }
+
+            .pizza-journey {
+                padding: 4px 12px 12px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1398,57 +1498,55 @@
                 <!-- Card 1 -->
                 <div class="pizza-card">
                     <h3>Додо Путешествие</h3>
-                    <p>Додо Путешествие — это ваш персональный гид по городам, который соединяет любимые места с вкусными остановками. Исследуйте достопримечательности и получайте награды!</p>
+                    <p>Додо Путешествие — это гид по городам, который показывает интересные места с вкусными остановками. Исследуйте достопримечательности и получайте награды!</p>
                 </div>
                 <!-- Card 2 -->
                 <div class="pizza-card">
-                        <h3>Как это работает?</h3>
+                        <h3>Как это работает</h3>
                     <ul class="card-list">
-                        <li><span class="step-num">1</span>Выбираете маршрут</li>
-                        <li><span class="step-num">2</span>Достигаете цели — получаете промокод</li>
-                        <li><span class="step-num">3</span>Собираете печати в цифровом паспорте</li>
+                        <li><span class="step-num">1</span>Откройте нужный город</li>
+                        <li><span class="step-num">2</span>Выберите маршрут</li>
+                        <li><span class="step-num">3</span>Отправляйтесь к достопримечательности</li>
+                        <li><span class="step-num">4</span>Сделайте фото</li>
+                        <li><span class="step-num">5</span>Загляните по пути в Додо Пиццу</li>
+                        <li><span class="step-num">6</span>Оформите заказ</li>
                     </ul>
+                    <p>За полное прохождение появится в паспорте путешественника.</p>
                 </div>
                 <!-- Card 3 -->
                 <div class="pizza-card">
-                        <h3>Маршрут путешествия</h3>
-                    <p>Пять этапов пути — от старта до заказа пиццы.</p>
-                    <div class="card-stops">
-                        <div class="card-stop"><div class="stop-icon">🚀</div><div class="stop-text"><h4>Старт</h4><p>Знакомство с маршрутом</p></div></div>
-                        <div class="card-stop"><div class="stop-icon">📖</div><div class="stop-text"><h4>История</h4><p>Путь Додо Пиццы</p></div></div>
-                        <div class="card-stop"><div class="stop-icon">🎮</div><div class="stop-text"><h4>Задания</h4><p>Интерактивные механики</p></div></div>
-                        <div class="card-stop"><div class="stop-icon">🏆</div><div class="stop-text"><h4>Награды</h4><p>Бонусы и промокоды</p></div></div>
-                        <div class="card-stop"><div class="stop-icon">⭐</div><div class="stop-text"><h4>Финал</h4><p>Заказ пиццы</p></div></div>
-                    </div>
+                        <h3>Что вы получите</h3>
+                    <ul class="card-list">
+                        <li><span class="step-num">�️</span>Готовый маршрут</li>
+                        <li><span class="step-num">🎟️</span>Промокод</li>
+                        <li><span class="step-num">🪙</span>Додокоины</li>
+                        <li><span class="step-num">✅</span>Печать в паспорт путешественника</li>
+                        <li><span class="step-num">⭐</span>Статус путешественника</li>
+                        <li><span class="step-num">�</span>Незабываемые приключения</li>
+                        <li><span class="step-num">👕</span>Эксклюзивные Додошки</li>
+                    </ul>
                 </div>
                 <!-- Card 4 -->
                 <div class="pizza-card">
-                        <h3>Что получает клиент</h3>
-                    <p>За каждый пройденный этап — бонус. Чем дальше продвигаетесь, тем ценнее награда.</p>
-                    <div class="card-features">
-                        <div class="card-feature"><span class="emoji">🎟️</span> Промокоды</div>
-                        <div class="card-feature"><span class="emoji">🍕</span> Бесплатная пицца</div>
-                        <div class="card-feature"><span class="emoji">🏅</span> Достижения</div>
-                        <div class="card-feature"><span class="emoji">🎁</span> Сюрпризы</div>
+                        <h3>Статусы путешественника</h3>
+                    <div class="card-stops">
+                        <div class="card-stop"><div class="stop-icon">🧳</div><div class="stop-text"><h4>Турист — 0–10 маршрутов</h4><p>Стартовый уровень и промокоды за выполнение цели.</p></div></div>
+                        <div class="card-stop"><div class="stop-icon">🔭</div><div class="stop-text"><h4>Исследователь — 11–30 маршрутов</h4><p>Двойные баллы по выходным.</p></div></div>
+                        <div class="card-stop"><div class="stop-icon">🧭</div><div class="stop-text"><h4>Штурман — 31–100 маршрутов</h4><p>Секретные маршруты и ранний доступ к новым городам.</p></div></div>
+                        <div class="card-stop"><div class="stop-icon">👑</div><div class="stop-text"><h4>Странник — 100+ маршрутов</h4><p>Золотая печать и возможность предложить собственный маршрут.</p></div></div>
                     </div>
                 </div>
                 <!-- Card 5 -->
                 <div class="pizza-card">
-                        <h3>Экраны проекта</h3>
-                    <p>Тринадцать экранов — каждая глава путешествия с уникальным дизайном и интерактивом.</p>
-                    <div class="card-features">
-                        <div class="card-feature"><span class="emoji">🚀</span> Старт</div>
-                        <div class="card-feature"><span class="emoji">🗺️</span> Карта</div>
-                        <div class="card-feature"><span class="emoji">📖</span> История</div>
-                        <div class="card-feature"><span class="emoji">🏆</span> Финал</div>
-                    </div>
+                        <h3>Паспорт путешественника</h3>
+                    <p>Каждый пройденный маршрут — печать в электронном паспорте. Чем больше городов позади, тем выше звание: от Туриста до Странника, с новыми привилегиями на каждом уровне.</p>
                 </div>
                 <!-- Card 6 -->
                 <div class="pizza-card">
-                        <h3>Готовы начать путешествие?</h3>
-                    <p>Запустим проект и познакомим ваших клиентов с миром Додо Пиццы. Свяжитесь с командой для запуска!</p>
-                    <button class="card-cta" onclick="event.stopPropagation(); alert('Демонстрационная страница. Свяжитесь с командой проекта для запуска.');">
-                        Связаться с командой
+                        <h3>Готовы к первому маршруту?</h3>
+                    <img src="route-map.png" alt="Маршрут" class="card-img">
+                    <button class="card-cta" onclick="event.stopPropagation(); startJourney();">
+                        Начать путешествие
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </button>
                 </div>
