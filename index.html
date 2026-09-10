@@ -1017,19 +1017,31 @@
             transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
+        .unified-card {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .unified-card .pizza-display {
+            margin: 0 auto;
+            padding-top: 32px;
+            width: 140px;
+            height: 140px;
+        }
+
         .pizza-card {
             width: 100%;
             min-width: 100%;
             flex-shrink: 0;
-            padding: 32px 24px;
-            background: white;
-            border-radius: 24px;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+            padding: 24px;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            min-height: 340px;
+            min-height: 300px;
         }
 
         .pizza-card .card-hero-badge {
@@ -1413,18 +1425,19 @@
 
     <!-- PIZZA JOURNEY CAROUSEL - FULL PAGE -->
     <section class="pizza-journey" id="pizza-journey">
-        <div class="pizza-display">
-            <div class="pizza-photo">
-                <div class="slice" data-slice="0"></div>
-                <div class="slice" data-slice="1"></div>
-                <div class="slice" data-slice="2"></div>
-                <div class="slice" data-slice="3"></div>
-                <div class="slice" data-slice="4"></div>
-                <div class="slice" data-slice="5"></div>
+        <div class="unified-card">
+            <div class="pizza-display">
+                <div class="pizza-photo">
+                    <div class="slice" data-slice="0"></div>
+                    <div class="slice" data-slice="1"></div>
+                    <div class="slice" data-slice="2"></div>
+                    <div class="slice" data-slice="3"></div>
+                    <div class="slice" data-slice="4"></div>
+                    <div class="slice" data-slice="5"></div>
+                </div>
             </div>
-        </div>
 
-        <div class="cards-container" onclick="changeCard(1)" style="cursor:pointer;">
+            <div class="cards-container" onclick="changeCard(1)" style="cursor:pointer;">
             <div class="cards-track" id="cardsTrack">
                 <!-- Card 1 -->
                 <div class="pizza-card">
@@ -1484,6 +1497,7 @@
                     </button>
                 </div>
             </div>
+        </div>
         </div>
 
         <div class="cards-nav">
