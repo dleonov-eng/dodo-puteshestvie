@@ -1255,18 +1255,17 @@
         }
 
         .nav-btn {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
+            padding: 14px 20px;
+            border-radius: 16px;
             border: 2px solid rgba(255, 93, 1, 0.3);
             background: transparent;
             color: #FF5D01;
-            font-size: 20px;
+            font-size: 15px;
+            font-weight: 700;
+            font-family: inherit;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             transition: all 0.3s ease;
+            flex: 1;
         }
 
         .nav-btn:hover:not(:disabled) {
@@ -1502,20 +1501,8 @@
         </div>
 
         <div class="cards-nav">
-            <button class="nav-btn" id="prevBtn" onclick="changeCard(-1)" disabled>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-            </button>
-            <div class="dots" id="dots">
-                <button class="dot active" onclick="goToCard(0)"></button>
-                <button class="dot" onclick="goToCard(1)"></button>
-                <button class="dot" onclick="goToCard(2)"></button>
-                <button class="dot" onclick="goToCard(3)"></button>
-                <button class="dot" onclick="goToCard(4)"></button>
-                <button class="dot" onclick="goToCard(5)"></button>
-            </div>
-            <button class="nav-btn" id="nextBtn" onclick="changeCard(1)">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-            </button>
+            <button class="nav-btn" id="prevBtn" onclick="goToCard(0)" disabled>Вернуться в начало</button>
+            <button class="nav-btn" id="nextBtn" onclick="changeCard(1)">Я все знаю, начать путешествие</button>
         </div>
     </section>
 
